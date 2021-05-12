@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sampleProyect/componets/audiotrack_option.dart';
 import 'package:sampleProyect/componets/beach_access_option.dart';
 import 'package:sampleProyect/componets/favorite_option.dart';
+import 'package:sampleProyect/componets/content_section.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,11 +16,20 @@ class MyApp extends StatelessWidget {
           title: Text('Ejemplo'),
         ),
         body: Container(
-          child: Row(
+         child: Column(
             children: [
-              FavoriteOption(),
-              AudioTrackOption(),
-              BeachAccessOption(),
+              Row(
+                children: [
+                  FavoriteOption(),
+                  AudioTrackOption(),
+                  BeachAccessOption(),
+                ],
+              ),
+              Row(
+                children: [
+                  ContentSection(),
+                ],
+              ),
             ],
           ),
         ),
